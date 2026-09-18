@@ -1,0 +1,41 @@
+name: Validate pipeline and applications
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install -r requirements-checks.txt
+      - run: python scripts/validate_config.py
+      - run: python -m unittest discover -s tests -v
+  applications:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        app: [frontend, backend]
+    defaults:
+      run:
+        working-directory: ${{ matrix.app }}
+    env:
+      NODE_OPTIONS: ${{ matrix.app == 'frontend' && '--openssl-legacy-provider' || '' }}
+      API_URL: http://127.0.0.1:3030
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24.16.0'
+          cache: npm
+          cache-dependency-path: ${{ matrix.app }}/package-lock.json
+      - run: npm ci --ignore-scripts --legacy-peer-deps
+      - run: npm test -- --runInBand --coverage=false
+      - run: npm run build

@@ -1,0 +1,12 @@
+services:
+  web-app:
+    build: ./frontend
+    ports:
+      - "127.0.0.1:3000:3000"
+    stdin_open: true
+  backend-api:
+    build: ./api
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:?Set a local disposable Django secret}
+    ports:
+      - "127.0.0.1:8000:8000"

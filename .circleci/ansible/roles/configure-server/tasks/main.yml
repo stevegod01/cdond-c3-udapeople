@@ -1,31 +1,38 @@
 ---
-- name: "update local apt repo."
+- name: Install archive prerequisites
   become: true
-  apt:
-    update_cache: yes
+  ansible.builtin.apt:
+    name: [ca-certificates, xz-utils]
+    state: present
+    update_cache: true
 
-- name: "upgrade apt packages"
+- name: Download Node.js with the official release checksum
+  ansible.builtin.get_url:
+    url: https://nodejs.org/dist/v24.16.0/node-v24.16.0-linux-x64.tar.xz
+    dest: /tmp/node-v24.16.0-linux-x64.tar.xz
+    checksum: sha256:https://nodejs.org/dist/v24.16.0/SHASUMS256.txt
+    mode: '0644'
+
+- name: Install the pinned Node.js runtime
   become: true
-  apt:
-    upgrade: yes
+  ansible.builtin.unarchive:
+    src: /tmp/node-v24.16.0-linux-x64.tar.xz
+    dest: /opt
+    remote_src: true
+    creates: /opt/node-v24.16.0-linux-x64/bin/node
 
-
-- name: "remove stale dependencies"
+- name: Expose Node.js executables
   become: true
-  apt:
-    autoremove: yes
+  ansible.builtin.file:
+    src: "/opt/node-v24.16.0-linux-x64/bin/{{ item }}"
+    dest: "/usr/local/bin/{{ item }}"
+    state: link
+  loop: [node, npm, npx]
 
-- name: "install dependencies [nodejs and npm]."
+- name: Install PM2 for the application process
   become: true
-  apt:
-    name: ["nodejs", "npm"]
-    state: latest
-    update_cache: yes
-
-- name: "install pm2"
-  become: true
-  npm:
+  community.general.npm:
     name: pm2
-    global: yes
-    production: yes
+    version: 7.0.4
+    global: true
     state: present

@@ -1,0 +1,145 @@
+{
+  "canonical_original_head": "58798071bd411060373e5dbe6aa3f619444857ed",
+  "variant_original_head": "0ccb3f678faf1e81154757c0737826eff66e4642",
+  "identical_files": 307,
+  "preserved_variants": [
+    {
+      "path": ".circleci/ansible/configure-server.yml",
+      "variant_blob": "2cfb0b4f407b17c6b846e271992cda14eb8724b2",
+      "canonical_blob": "3c104c246d1147e0d7a3cd4d451bae5f546527a1",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/.circleci/ansible/configure-server.yml"
+    },
+    {
+      "path": ".circleci/ansible/deploy-backend.yml",
+      "variant_blob": "278b85bed08f7082424241297c4b62f345db5541",
+      "canonical_blob": "42a47a6136a5e40dc2d20105555ffaff2851cc36",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/.circleci/ansible/deploy-backend.yml"
+    },
+    {
+      "path": ".circleci/ansible/roles/configure-server/files/myenv.sh",
+      "variant_blob": "b8b5ac5abd9b95987ebd81493a6728a2ab2357ee",
+      "canonical_blob": null,
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/.circleci/ansible/roles/configure-server/files/myenv.sh"
+    },
+    {
+      "path": ".circleci/ansible/roles/configure-server/tasks/main.yml",
+      "variant_blob": "a46a9efc136b9af4a00025ba83816fceb16fb5a5",
+      "canonical_blob": "f149d02ff326345f11c46f2c1127ad6c19ce22a2",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/.circleci/ansible/roles/configure-server/tasks/main.yml"
+    },
+    {
+      "path": ".circleci/ansible/roles/deploy/tasks/main.yml",
+      "variant_blob": "f66d536ea025185d46a4d873db5530ccf6484244",
+      "canonical_blob": "eeed3ffe248c8942f8eb1f97e45ac99187cf87f2",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/.circleci/ansible/roles/deploy/tasks/main.yml"
+    },
+    {
+      "path": ".circleci/config copy.yml",
+      "variant_blob": "17882fa203586cb18053e24f9c49eac2c0ce82cb",
+      "canonical_blob": null,
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/.circleci/config%20copy.yml"
+    },
+    {
+      "path": ".circleci/config.yml",
+      "variant_blob": "ecc51958b255e3d52b83aebde58642e2406e8e88",
+      "canonical_blob": "fa770835f3f275a8ff46337ad03fdc5c46cd1088",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/.circleci/config.yml"
+    },
+    {
+      "path": ".circleci/files/backend.yml",
+      "variant_blob": "70e5a548eeee0c5f1efbe828dc1a868dd3a941d8",
+      "canonical_blob": "6cd996956aa7ed015315584f0a29085419d925fe",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/.circleci/files/backend.yml"
+    },
+    {
+      "path": ".circleci/files/cloudfront.yml",
+      "variant_blob": "c51ef585a03d2e0ed91f51b823fa5b12f635dad6",
+      "canonical_blob": "4acfcc6e53bb48284f450ef4bcb4ccf01c3735ea",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/.circleci/files/cloudfront.yml"
+    },
+    {
+      "path": "README.md",
+      "variant_blob": "d2b33580058351d6a2d990ca23810ae9cb1bca9a",
+      "canonical_blob": "7206bafde20d1817408d71d498bd9f3f9379cc2a",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/README.md"
+    },
+    {
+      "path": "backend/package.json",
+      "variant_blob": "95ea8216279e3c04c738b3c61204676b463a3d33",
+      "canonical_blob": "e3527d0fffccc2d352d7757c40b6c65085999b9c",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/backend/package.json"
+    },
+    {
+      "path": "backend/src/modules/domain/employees/commands/handlers/employee-activator.handler.spec.ts",
+      "variant_blob": "2e15a70d8992588ef8a50aad835aa92058349910",
+      "canonical_blob": "ae25cdbbdbf5ff1995e11093bfcf15e4aeb993d1",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/backend/src/modules/domain/employees/commands/handlers/employee-activator.handler.spec.ts"
+    },
+    {
+      "path": "frontend/src/app/components/Empty/index.tsx",
+      "variant_blob": "eca05cc0f3c661218f7888bc793892723b2b4626",
+      "canonical_blob": "d6eccb19df23c89149cc663d254e84b7456a5e15",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/frontend/src/app/components/Empty/index.tsx"
+    },
+    {
+      "path": "frontend/src/app/components/Empty/style.local.css",
+      "variant_blob": "6b982065925fc2482ff63a409f600fd3b0993907",
+      "canonical_blob": "371524b7cc7c11cb4d67fffebc7b031bb1ec1469",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/frontend/src/app/components/Empty/style.local.css"
+    },
+    {
+      "path": "frontend/src/app/components/Navbar/index.tsx",
+      "variant_blob": "7d75c5e464325c2a0eadd9e6487b5c901ff008ee",
+      "canonical_blob": "696a9ad7420fdff61392260ea2bbff10f61d58bd",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/frontend/src/app/components/Navbar/index.tsx"
+    },
+    {
+      "path": "frontend/src/app/components/Navbar/style.local.css",
+      "variant_blob": "12e9145b70a2240e1365658b04e5ae8b14497f93",
+      "canonical_blob": "935c99d557f7dfbf5f29b0c3b66897482da7520f",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/frontend/src/app/components/Navbar/style.local.css"
+    },
+    {
+      "path": "frontend/src/app/components/NavbarButton/index.tsx",
+      "variant_blob": "19431caf424961be4a05142e45351fce02bd7633",
+      "canonical_blob": "39362bd153411e9a97ce870a51b6c01c4dd9fe41",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/frontend/src/app/components/NavbarButton/index.tsx"
+    },
+    {
+      "path": "frontend/src/app/components/NavbarButton/style.local.css",
+      "variant_blob": "7842141e262ba88085709e01a3676beb96fc0de0",
+      "canonical_blob": "5ea04a1e378a34fd0deecb39f021179f257dc010",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/frontend/src/app/components/NavbarButton/style.local.css"
+    },
+    {
+      "path": "frontend/src/app/components/OrdersTable/NoFilteredOrders/NoFilteredOrders.spec.tsx",
+      "variant_blob": "1203f40fdcfe2fae89ac23507c284747d4b014f8",
+      "canonical_blob": "59b98fb25c385e7f32a5dcb3f0589ed7f876b3cd",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/frontend/src/app/components/OrdersTable/NoFilteredOrders/NoFilteredOrders.spec.tsx"
+    },
+    {
+      "path": "frontend/src/app/components/OrdersTable/NoFilteredOrders/index.tsx",
+      "variant_blob": "027079a525c9af50b99b37efcfd8f8c54bfe5d6b",
+      "canonical_blob": "d0847cc242ca2c51b4ee600d85855533c406ec24",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/frontend/src/app/components/OrdersTable/NoFilteredOrders/index.tsx"
+    },
+    {
+      "path": "frontend/src/app/components/OrdersTable/NoFilteredOrders/style.local.css",
+      "variant_blob": "fb1aba398051737cde08f4bde8b1c0180bd2e26b",
+      "canonical_blob": "beb87854c1983b1f1bb12a3f44cc51ed0bd8ef0c",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/frontend/src/app/components/OrdersTable/NoFilteredOrders/style.local.css"
+    },
+    {
+      "path": "frontend/src/assets/images/icon-search.svg",
+      "variant_blob": "4d42e19588e6cbd06b611619ee36b91ed858b471",
+      "canonical_blob": "3e6c5d526442ed1d7e8f9d23209b4cf977c3b158",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/frontend/src/assets/images/icon-search.svg"
+    },
+    {
+      "path": "frontend/src/assets/img/icon-search.svg",
+      "variant_blob": "4d42e19588e6cbd06b611619ee36b91ed858b471",
+      "canonical_blob": "3e6c5d526442ed1d7e8f9d23209b4cf977c3b158",
+      "source_url": "https://github.com/stevegod01/udapeople-cicd/blob/0ccb3f678faf1e81154757c0737826eff66e4642/frontend/src/assets/img/icon-search.svg"
+    }
+  ]
+}

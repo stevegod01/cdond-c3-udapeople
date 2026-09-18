@@ -6,6 +6,16 @@ Parameters:
     Description: Unique identifier.
     Type: String
 
+  ImageId:
+    Description: Current Ubuntu x86_64 AMI in the deployment region.
+    Type: AWS::EC2::Image::Id
+  KeyPairName:
+    Description: EC2 key pair corresponding to the configured CircleCI SSH key.
+    Type: AWS::EC2::KeyPair::KeyName
+  SshCidr:
+    Description: CIDR for the deployment runner or administrator.
+    Type: String
+
 Resources:
   InstanceSecurityGroup:
     Type: AWS::EC2::SecurityGroup
@@ -16,7 +26,7 @@ Resources:
         - IpProtocol: tcp
           FromPort: 22
           ToPort: 22
-          CidrIp: 0.0.0.0/0
+          CidrIp: !Ref SshCidr
         - IpProtocol: tcp
           FromPort: 3030
           ToPort: 3030
@@ -36,10 +46,10 @@ Resources:
       InstanceType: t2.micro
       SecurityGroups:
         - Ref: InstanceSecurityGroup
-      KeyName: udacitykey # If you use another key pair name, you should change this value to match.
+      KeyName: !Ref KeyPairName
       # If this ami id is not available for you, you can find another (https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/finding-an-ami.html)
       # Ubuntu 18 or higher works fine
-      ImageId: ami-052efd3df9dad4825
+      ImageId: !Ref ImageId
       Tags:
         - Key: Name
           Value: !Sub backend-${ID}
